@@ -1,0 +1,52 @@
+* {margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    
+    background: transparent;
+  
+    font-family: inherit;
+    text-decoration: none; 
+  }
+
+  ol, ul, li {
+    display: block;
+    list-style: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  a img {
+    border: none;
+  }
+  
+  button, a {
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button, input, textarea, select {
+    appearance: none !important;
+    -webkit-appearance: none !important; 
+    border-radius: 0;
+  }
+
+  #root {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+      /*flex-direction: column;*/
+      /* a row(vízszintese.) a default, de így oszlopokba rendezem a columnnal(függőleges) - Tehát az elsődleges tengelyből másodlagost csináltam, megfordítottam őket.*/
+      justify-content: center; /*ahol nem tudja kitölteni a tartalommal, ott középre rendezi - az elsődleges tengelyre hat.-*/
+      align-items: center; /* másodlagos tengelyre hat, megpróbálja egymáshoz közelíteni őket*/
+  }
+
+  /*A flex és a grid mindig a közvetlen childokra lesz igaz, ezáltal vannak a parentre meg a childokra rakható tulajdonságok. Mi most csak a parentre raktunk.*/
