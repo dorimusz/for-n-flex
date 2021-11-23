@@ -1,3 +1,5 @@
+//Órai kommentekkel ellátott:
+
 //Tömbgeneráló függvény, ahol az amount az a paraméter, ahol megmondom mennyit fog generálni
 const generateArray = function(amount) {
     let returnArray = [];
@@ -9,10 +11,14 @@ const generateArray = function(amount) {
     amount = parseInt(amount); //pozitív egész számá alakítom, saját magával írtuk felül. innentől már nem kaphatok stringet
     //console.log(amount);
 
+    let lengthCount = amount.toString().length
+    console.log(lengthCount);
+
     if (!Number.isNaN(amount)) { //akkor menjen be az if ágba, ha nem NaN
         //console.log("Az amount egy szám.");
 
         for (let i = 0; i < amount; i++) {
+            i = ("0000000" + i).slice(-lengthCount);
             returnArray.push(`${i}`);
         }
     } else {
