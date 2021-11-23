@@ -37,7 +37,7 @@ const loadEvent = function () {
     console.log("Az oldal betöltődött.");
 
     const root = document.getElementById("root");
-    const list = generateArray(2000);
+    const list = generateArray(200);
     
     if (list[0] !== "error") {
         for (const item of list) {
